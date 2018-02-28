@@ -1,7 +1,7 @@
 # LFActionSheet
 自定义微信样式ActionSheet <br />
 
- ![image](https://github.com/LFOpen/LFActionSheet/raw/master/pics/pic1.png =120)
+ ![image](https://github.com/LFOpen/LFActionSheet/raw/master/pics/pic1.png =120*60)
  ![image](https://github.com/LFOpen/LFActionSheet/raw/master/pics/pic2.png)
  ![image](https://github.com/LFOpen/LFActionSheet/raw/master/pics/pic3.png)
 
