@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LFActionSheet"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "一个仿微信样式的ActionSheet."
   s.description  = <<-DESC
 		一个仿微信样式的ActionSheet,包括基本的ActionSheet功能，以及封装好的退出登录ActionSheet和选择图片ActionSheet

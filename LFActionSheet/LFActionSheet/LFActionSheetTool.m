@@ -8,6 +8,7 @@
 
 #import "LFActionSheetTool.h"
 #import "LFActionSheet.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface LFActionSheetTool() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (strong, nonatomic) SelectImageAction selectImageAction;
@@ -56,6 +57,12 @@
 }
 
 - (void)takePicture {
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (authStatus == AVAuthorizationStatusDenied || authStatus == AVAuthorizationStatusRestricted) {
+        self.selectImageAction(nil, YES);
+        return;
+    }
+    
     UIViewController *currentVC = [self currentViewController];
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -76,7 +83,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
-    self.selectImageAction(image);
+    self.selectImageAction(image, NO);
 }
 
 - (UIViewController *)currentViewController {

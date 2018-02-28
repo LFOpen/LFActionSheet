@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^LogoutAction)(void);
-typedef void(^SelectImageAction)(UIImage *selectedImage);
+typedef void(^SelectImageAction)(UIImage *selectedImage, Boolean notAuthrized);
 
 @interface LFActionSheetTool : NSObject
 
