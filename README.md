@@ -1,5 +1,9 @@
 # LFActionSheet
-自定义微信样式ActionSheet
+自定义微信样式ActionSheet <br />
+
+ ![image](https://github.com/LFOpen/LFActionSheet/edit/raw/master/pics/pic1.png)
+ ![image](https://github.com/LFOpen/LFActionSheet/edit/raw/master/pics/pic2.png)
+ ![image](https://github.com/LFOpen/LFActionSheet/edit/raw/master/pics/pic3.png)
 
 # Cocoapods 集成
 因为要使用私有库，所以需要同时指定私有库和Cocoapod公有库的地址
