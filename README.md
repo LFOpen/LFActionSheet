@@ -46,7 +46,8 @@ end
  
  2. 选择照片用ActionSheet
  ```
-     [[LFActionSheetTool sharedInstance] showChoseImageSheetWithMessage:@"请选择照片" complecation:^(UIImage *selectedImage) {
+    [[LFActionSheetTool sharedInstance] showChoseImageSheetWithMessage:@"选择图片" complecation:^(UIImage *selectedImage, Boolean notAuthrized) {
         NSLog(@"%@", selectedImage);
+        NSLog(@"%d", notAuthrized);
     }];
  ```
